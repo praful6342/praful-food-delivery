@@ -1,16 +1,22 @@
 <template>
   <div id="app">
+    <AppHeader />
     <HeroSection />
-    <!-- Your other components will go here -->
+    <!-- Restaurant Listing Component will come here -->
+    <AppFooter />
   </div>
 </template>
 
 <script>
-import HeroSection from './components/HeroSection.vue'
+import AppHeader from './components/Header.vue'
+import AppFooter from './components/Footer.vue'
+import HeroSection from './components/HeroSection.vue' // Make sure this is imported
 
 export default {
   name: 'App',
   components: {
+    AppHeader,
+    AppFooter,
     HeroSection,
   },
 }
@@ -22,7 +28,9 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /*text-align: center;*/
   color: #2c3e50;
+  margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
 }
 </style>
