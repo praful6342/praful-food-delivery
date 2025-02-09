@@ -25,12 +25,20 @@ export default {
 <style>
 /* Global styles for your app */
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /*text-align: center;*/
-  color: #2c3e50;
-  margin: 0; /* Remove default body margin */
-  padding: 0; /* Remove default body padding */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Make the app take the full height of the viewport */
+}
+
+header {
+  flex-shrink: 0; /* Prevents the header from shrinking */
+}
+
+.hero {
+  flex-grow: 1; /* Make the hero section take up the remaining space */
+}
+
+footer {
+  flex-shrink: 0; /* Prevents the footer from shrinking */
 }
 </style>
